@@ -156,6 +156,14 @@ html[data-edition="home"] #aura .a-home, html[data-edition="wellness"] #aura .a-
 .callrow { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 22px; }
 .callnum { display: grid; gap: 3px; text-align: center; }
 .callnum small { color: var(--muted); font-size: .86rem; }
+.proof { margin: 0 auto clamp(44px, 7vw, 64px); padding: 24px 26px 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; text-align: left; }
+.proof > small { display: block; margin-bottom: 16px; font: 700 .74rem/1.2 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-dark); }
+.proof ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 13px; }
+.proof li { position: relative; padding-left: 32px; color: var(--muted-strong); font-size: 1.02rem; line-height: 1.45; }
+.proof li::before { content: ""; position: absolute; left: 0; top: .12em; width: 21px; height: 21px; border-radius: 50%; background: var(--soft); }
+.proof li::after { content: ""; position: absolute; left: 6px; top: .5em; width: 8px; height: 4px; border-left: 2px solid var(--primary); border-bottom: 2px solid var(--primary); transform: rotate(-45deg); }
+.proof li b { color: var(--ink); font-weight: 700; }
+.proof-src { margin: 16px 0 0; font-size: .8rem; line-height: 1.45; color: var(--muted); }
 .card { margin-top: clamp(24px, 4vw, 36px); background: var(--paper); border: 1px solid var(--line); border-radius: 28px; padding: clamp(22px, 5vw, 44px); box-shadow: 0 50px 80px -60px rgba(0,0,0,.6); }
 .field { margin-top: 16px; }
 form > .field:first-child { margin-top: 0; }
@@ -325,6 +333,16 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
 
   <section class="join" id="join">
     <div class="wrap">
+      <div class="proof rv">
+        <small>What's different about these products</small>
+        <ul>
+          <li><b>No chlorine bleach. Ever.</b> The maker never uses it.</li>
+          <li><b>Biodegradable ingredients and enzymes</b> in the home-care range, instead of harsh chemicals.</li>
+          <li><b>Concentrated formulas.</b> You don't pay for water, and the spray bottles are reusable.</li>
+          <li><b>Made since 1985, and trusted.</b> Named one of America's Most Trusted Brands in 2025, and ranked No. 2 for value among 300 top US brands by Forbes in 2026.</li>
+        </ul>
+        <p class="proof-src">These are the maker's own statements about its products. The rankings come from US consumer studies of the maker.</p>
+      </div>
       <div class="join-head rv">
         <h2>Speak to us.</h2>
         <p>Leave your details and we'll be in touch within a day, or call our AI assistant now. No obligation.</p>
@@ -1124,7 +1142,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     // Phone line answered by the AI assistant. Put the real number here when it is ready, with country code and
     // no spaces, e.g. '+60312345678'. The number is never shown on the page; the buttons just dial it.
     // While AI_PHONE is empty the buttons do not dial.
-    AI_PHONE: ''
+    AI_PHONE: '+60360439510'
   };
 
   var DEMO_KEY = 'smartShelf.demoLeads';
