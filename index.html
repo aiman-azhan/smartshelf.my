@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Smart Shelf</title>
 <meta property="og:title" content="Smart Shelf">
-<meta property="og:description" content="Everyday essentials for home, wellness and baby, direct from the maker. Speak to us.">
+<meta property="og:description" content="Everyday essentials for home, wellness and baby, direct from the manufacturer. Speak to us.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#f6f1e7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,7 +158,8 @@ html[data-edition="home"] #aura .a-home, html[data-edition="wellness"] #aura .a-
 .callnum small { color: var(--muted); font-size: .86rem; }
 .proof { margin: 0 auto clamp(44px, 7vw, 64px); padding: 24px 26px 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; text-align: left; }
 .proof > small { display: block; margin-bottom: 16px; font: 700 .74rem/1.2 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-dark); }
-.proof ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 13px; }
+.proof ul { list-style: none; margin: 0; padding: 0; display: none; gap: 13px; }
+#vr-home:checked ~ main .proof ul[data-ed="home"], #vr-wellness:checked ~ main .proof ul[data-ed="wellness"], #vr-baby:checked ~ main .proof ul[data-ed="baby"] { display: grid; }
 .proof li { position: relative; padding-left: 32px; color: var(--muted-strong); font-size: 1.02rem; line-height: 1.45; }
 .proof li::before { content: ""; position: absolute; left: 0; top: .12em; width: 21px; height: 21px; border-radius: 50%; background: var(--soft); }
 .proof li::after { content: ""; position: absolute; left: 6px; top: .5em; width: 8px; height: 4px; border-left: 2px solid var(--primary); border-bottom: 2px solid var(--primary); transform: rotate(-45deg); }
@@ -195,9 +196,8 @@ fieldset { border: 0; padding: 0; margin: 20px 0 0; min-width: 0; }
 .thanks p { margin-top: 10px; color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .thanks:not([hidden]) .tick { animation: pop .5s cubic-bezier(.2,.9,.3,1.5) both; } @keyframes pop { from { transform: scale(.3); opacity: 0; } } }
 
-footer { background: var(--ground); padding: 28px 0 calc(110px + env(safe-area-inset-bottom, 0px)); font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line); text-align: center; }
-footer p { max-width: 56em; margin-inline: auto; }
-footer p + p { margin-top: 6px; }
+footer { background: var(--ground); padding: 18px 0 calc(104px + env(safe-area-inset-bottom, 0px)); font-size: .7rem; line-height: 1.5; color: var(--muted); border-top: 1px solid var(--line); text-align: center; }
+footer p { max-width: 62em; margin: 0 auto; text-wrap: pretty; }
 
 /* Mobile sticky button */
 .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 14; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, var(--ground) 60%, rgba(var(--g),0)); display: none; transition: transform .3s ease, opacity .3s ease; }
@@ -282,7 +282,7 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
         <div class="hero-copy">
           <p class="kicker rise">Cleaning · Laundry · Bath and body</p>
           <h1 class="rise d1">The same weekly essentials.<br>At <em>direct prices</em>.</h1>
-          <p class="lede rise d2">What you grab on every pharmacy and supermarket run. One maker, one box, 30–50% below its regular prices.</p>
+          <p class="lede rise d2">What you grab on every pharmacy and supermarket run. One manufacturer, one box, 30–50% below its regular prices.</p>
           <div class="actions rise d3"><a class="btn" href="#join">Speak to us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
@@ -296,7 +296,7 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
         <div class="hero-copy">
           <p class="kicker rise">Vitamins · Nutrition · Skin care · Grooming</p>
           <h1 class="rise d1">Daily wellness, for him and her.<br>At <em>direct prices</em>.</h1>
-          <p class="lede rise d2">The vitamins, skin care and grooming you already buy. One maker, one box, 30–50% below its regular prices.</p>
+          <p class="lede rise d2">The vitamins, skin care and grooming you already buy. One manufacturer, one box, 30–50% below its regular prices.</p>
           <div class="actions rise d3"><a class="btn" href="#join">Speak to us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
@@ -310,7 +310,7 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
         <div class="hero-copy">
           <p class="kicker rise">Bath · Lotion · Kids · Their laundry</p>
           <h1 class="rise d1">Gentle on their skin.<br>Easier on your <em>budget</em>.</h1>
-          <p class="lede rise d2">Wash, lotion and laundry for little ones. One maker, one box, 30–50% below its regular prices.</p>
+          <p class="lede rise d2">Wash, lotion and laundry for little ones. One manufacturer, one box, 30–50% below its regular prices.</p>
           <div class="actions rise d3"><a class="btn" href="#join">Speak to us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
@@ -321,11 +321,11 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
   <section class="story" id="story" aria-label="How it reaches you">
     <div class="pin">
       <div class="caps">
-        <p class="cap" data-a=".095" data-b=".278"><small>The usual way</small><span class="ct">Three shops. Three queues.</span></p>
-        <p class="cap" data-a=".295" data-b=".392"><small>The smart way</small><span class="ct">Order once, from the sofa.</span></p>
-        <p class="cap" data-a=".405" data-b=".575"><small>No middlemen</small><span class="ct">Packed by the maker.</span></p>
-        <p class="cap" data-a=".605" data-b=".825"><small>On its way</small><span class="ct">One box. One trip.</span></p>
-        <p class="cap" data-a=".858" data-b="1.1"><small>30–50% below regular prices</small><span class="ct">Straight to your door.</span><a class="btn" href="#join">Speak to us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        <p class="cap" data-a=".095" data-b=".256"><small>The usual way</small><span class="ct">Three shops. Three queues.</span></p>
+        <p class="cap" data-a=".287" data-b=".406"><small>The smart way</small><span class="ct">Order once, from the sofa.</span></p>
+        <p class="cap" data-a=".42" data-b=".586"><small>No middlemen</small><span class="ct">Packed by the manufacturer.</span></p>
+        <p class="cap" data-a=".615" data-b=".83"><small>On its way</small><span class="ct">One box. One trip.</span></p>
+        <p class="cap" data-a=".862" data-b="1.1"><small>30–50% below regular prices</small><span class="ct">Straight to your door.</span><a class="btn" href="#join">Speak to us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       </div>
       <div class="sdots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     </div>
@@ -335,13 +335,25 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
     <div class="wrap">
       <div class="proof rv">
         <small>What's different about these products</small>
-        <ul>
-          <li><b>No chlorine bleach. Ever.</b> The maker never uses it.</li>
+        <ul data-ed="home">
+          <li><b>No chlorine bleach or ammonia. Ever.</b> Both are on the manufacturer's list of ingredients it never uses.</li>
           <li><b>Biodegradable ingredients and enzymes</b> in the home-care range, instead of harsh chemicals.</li>
           <li><b>Concentrated formulas.</b> You don't pay for water, and the spray bottles are reusable.</li>
-          <li><b>Made since 1985, and trusted.</b> Named one of America's Most Trusted Brands in 2025, and ranked No. 2 for value among 300 top US brands by Forbes in 2026.</li>
+          <li><b>Proven first.</b> If there's no clear proof an ingredient is safe, the manufacturer leaves it out.</li>
         </ul>
-        <p class="proof-src">These are the maker's own statements about its products. The rankings come from US consumer studies of the maker.</p>
+        <ul data-ed="wellness">
+          <li><b>Proven first.</b> If there's no clear proof an ingredient is safe, the manufacturer leaves it out.</li>
+          <li><b>Natural where it's proven.</b> Naturally based ingredients come first, once they're documented as safe and effective.</li>
+          <li><b>Its own scientists.</b> The formulas come from the manufacturer's in-house research team.</li>
+          <li><b>About forty years at it.</b> The manufacturer has been choosing ingredients this way for close to four decades.</li>
+        </ul>
+        <ul data-ed="baby">
+          <li><b>No parabens, phthalates or formaldehyde.</b> All three are on the manufacturer's list of ingredients it never uses.</li>
+          <li><b>No chlorine bleach or ammonia</b> in the laundry and cleaning products.</li>
+          <li><b>Proven first.</b> If there's no clear proof an ingredient is safe, the manufacturer leaves it out.</li>
+          <li><b>Biodegradable ingredients</b> in the laundry and home-care range.</li>
+        </ul>
+        <p class="proof-src">These are the manufacturer's own published statements about how it chooses ingredients.</p>
       </div>
       <div class="join-head rv">
         <h2>Speak to us.</h2>
@@ -403,8 +415,7 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
 
 <footer>
   <div class="wrap">
-    <p>Smart Shelf is an independently owned brand, operated by a limited liability partnership. It is independent of the manufacturer.</p>
-    <p>Direct prices are the manufacturer's shopping-club prices, which come with a sign-up and a monthly order. We explain everything before you decide. Prices shown are as listed for Malaysia, November 2026. General information only, not medical advice.</p>
+    <p>Smart Shelf is an independently owned brand, operated by a limited liability partnership, and is independent of the manufacturer. Direct prices are the manufacturer's shopping-club prices, which come with a sign-up and a monthly order; we explain everything before you decide. Prices as listed for Malaysia, November 2026. General information only, not medical advice.</p>
   </div>
 </footer>
 <div class="demo-bar" id="demo-bar" hidden>Prototype mode: entries are saved in this browser only. <a href="#leads">View list</a></div>
@@ -428,7 +439,7 @@ th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: 
 <script>
 /* Smart Shelf 3D world (three.js r128).
    One continuous street the camera travels along as the page scrolls:
-   product shelf -> three shops -> the maker -> the road -> your door. */
+   product shelf -> three shops -> home (order from the sofa) -> the manufacturer -> the road -> your door. */
 window.SmartShelfWorld = function (canvas, THREE, view) {
   'use strict';
   var PI = Math.PI, W = {};
@@ -723,6 +734,8 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
 
   /* ---------- 1. three shops ---------- */
   var SHOPX = [-10, -6.5, -3];
+  // What the three shop signs say in each edition (a leading + draws a pharmacy cross). Shop types only: no real shop names or logos.
+  var SIGNS = { home: ['MINI MARKET', 'HYPERMARKET', 'GROCER'], wellness: ['+FARMASI', 'HEALTH & BEAUTY', 'PHARMACY'], baby: ['+FARMASI', 'BABY STORE', 'HYPERMARKET'] }, signTex = [];
   function shop(x, awn, kind) {
     var g = grp(world, x, 0, -1.3);
     add(g, box(2.8, 2.5, 2.4), M.paper, 0, 1.25, 0); add(g, box(2.9, .22, 2.5), M.trim, 0, .11, 0); add(g, box(3.05, .16, 2.65), M.trim, 0, 2.58, 0);
@@ -731,12 +744,14 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     add(g, box(.74, 1.52, .06), M.ink, .8, .87, 1.21); add(g, box(.86, .08, .1), M.trim, .8, 1.67, 1.22); add(g, sph(.045, 8, 8), M.sun, .56, .9, 1.27);
     for (var i = 0; i < 6; i++) { var s = add(g, box(.47, .05, .98), i % 2 ? M.paper : awn, -1.175 + i * .47, 2.08, 1.58); s.rotation.x = .42; }
     add(g, box(.5, .05, .34), M.trim, .8, .025, 1.42);
-    var name = ['FARMASI', 'HEALTH & BEAUTY', 'PASAR RAYA'][kind], dark = kind === 2;
+    var dark = kind === 2;
     var sign = canvasTex(512, 160, function (x) {
+      var name = SIGNS[curView || view][kind], cross = name.charAt(0) === '+'; if (cross) name = name.slice(1);
       x.fillStyle = dark ? '#1b2620' : '#fffaf0'; x.textBaseline = 'middle'; x.textAlign = 'center';
-      var px = 78; x.font = '800 ' + px + 'px ' + FONT; var wd = x.measureText(name).width + (kind === 0 ? 86 : 0); if (wd > 470) { px = px * 470 / wd; x.font = '800 ' + px + 'px ' + FONT; wd = 470; }
-      if (kind === 0) { var cx = 256 - wd / 2 + 30; x.fillRect(cx - 26, 70, 52, 20); x.fillRect(cx - 10, 54, 20, 52); x.fillText(name, 256 + 43, 84); } else x.fillText(name, 256, 84);
+      var px = 78; x.font = '800 ' + px + 'px ' + FONT; var wd = x.measureText(name).width + (cross ? 86 : 0); if (wd > 470) { px = px * 470 / wd; x.font = '800 ' + px + 'px ' + FONT; wd = 470; }
+      if (cross) { var cx = 256 - wd / 2 + 30; x.fillRect(cx - 26, 70, 52, 20); x.fillRect(cx - 10, 54, 20, 52); x.fillText(name, 256 + 43, 84); } else x.fillText(name, 256, 84);
     });
+    signTex.push(sign);
     var sp = new THREE.Mesh(new THREE.PlaneGeometry(1.62, .506), new THREE.MeshBasicMaterial({ map: sign, transparent: true })); sp.position.set(0, 3.05, 1.126); g.add(sp);
     // a board on the pavement and a stack of baskets by the door
     var ab = grp(g, 1.55, 0, 1.75); add(ab, box(.4, .6, .03), awn, 0, .3, .06).rotation.x = -.2; add(ab, box(.4, .6, .03), M.trim, 0, .3, -.06).rotation.x = .2; add(ab, box(.28, .08, .01), M.paper, 0, .42, .105, true).rotation.x = -.2; add(ab, box(.2, .06, .01), M.paper, 0, .28, .13, true).rotation.x = -.2;
@@ -755,28 +770,42 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     var p = walkers[k] = human(LEADS[k]); walker.add(p); p.visible = k === view;
     p.userData.bags = k === 'baby' ? [] : [[1, 'accent', 0], [0, 'sun', 0], [1, 'white', .09]].map(function (d) { return add(p.userData.arms[d[0]].el, box(.1, .24, .2), M[d[1]], d[2], -.34, d[2]); });
   });
-  var pram = grp(walker, 0, 0, .62);
+  var pram = grp(world, -11.78, 0, 1.75);   // pushed ahead of the walker, then parked by the sofa
   add(pram, box(.32, .2, .5), M.primary, 0, .42, 0); var hood = add(pram, sph(.21, 14, 10), M.accent, 0, .52, -.12); hood.scale.set(.82, .9, 1); add(pram, box(.26, .05, .3), M.paper, 0, .52, .1);
   [[.17, .2], [-.17, .2], [.17, -.2], [-.17, -.2]].forEach(function (p) { add(pram, cyl(.09, .09, .04, 12), M.ink, p[0], .09, p[1]).rotation.z = PI / 2; add(pram, box(.03, .26, .03), M.trim, p[0] * .8, .22, p[1] * .8); });
   [.13, -.13].forEach(function (hx) { add(pram, box(.03, .46, .03), M.ink, hx, .62, -.36).rotation.x = -.6; }); add(pram, box(.3, .03, .03), M.ink, 0, .8, -.49);
   tree(-0.9, -2.3, 1.1); tree(1.1, -3.1, .95, 'pine'); lamp(-2.45); bush(-11.9, -.6, .8);
 
-  /* ---------- 1b. order online, from the sofa ---------- */
-  var RX = .35, room = grp(world, RX, .06, .5);
-  add(room, cyl(1.62, 1.62, .1, 44), M.wood, 0, .01, 0); add(room, cyl(1.2, 1.2, .02, 40), M.paper, -.2, .07, .12);
-  var sofa = grp(room, -.5, 0, -.3); sofa.rotation.y = .22;
+  /* ---------- 1b. home: a cutaway living room, where the order is placed ---------- */
+  var RX = .45, room = grp(world, RX, .06, .5), SOFA = [-.5, -.12, .1];   // sofa x, z and turn, inside the room
+  add(room, box(3.1, .1, 1.72), M.wood, 0, .01, .2); add(room, box(3.2, .07, .2), M.trim, 0, -.005, 1.12);                                    // floor and front step
+  add(room, cyl(.72, .72, .02, 40), M.paper, -.34, .07, .3, true);                                                                           // rug
+  add(room, box(3.1, 2.3, .12), M.paper, 0, 1.21, -.66); add(room, box(3.14, .16, .15), M.trim, 0, .14, -.6);                                 // back wall
+  add(room, box(.12, 2.3, .62), M.paper, -1.49, 1.21, -.35); add(room, box(.12, 2.3, .62), M.paper, 1.49, 1.21, -.35);                        // short side walls
+  add(room, prism([[-1.86, 0], [1.86, 0], [0, 1.2]], .56), M.accent, 0, 2.36, -.96); add(room, prism([[-1.44, 0], [1.44, 0], [0, .93]], .05), M.paper, 0, 2.42, -.415);   // roof and gable
+  add(room, box(.34, .7, .34), M.trim, .95, 3.05, -.7); add(room, box(.42, .08, .42), M.ink, .95, 3.42, -.7);                                 // chimney
+  add(room, box(.9, .68, .05), M.warm, -.62, 1.66, -.585, true); add(room, box(1.02, .08, .1), M.trim, -.62, 1.28, -.57); add(room, box(1.02, .06, .08), M.trim, -.62, 2.03, -.575);
+  add(room, box(.05, .68, .08), M.trim, -.62, 1.66, -.57); add(room, box(.9, .04, .08), M.trim, -.62, 1.66, -.57); glow(room, .7, -.62, 1.66, -.4);   // window over the sofa
+  add(room, box(.5, .62, .04), M.trim, .8, 1.6, -.585); add(room, box(.4, .52, .02), M.soft, .8, 1.6, -.565, true); add(room, cyl(.1, .1, .02, 16), M.sun, .86, 1.68, -.55, true).rotation.x = PI / 2;   // picture
+  var sofa = grp(room, SOFA[0], 0, SOFA[1]); sofa.rotation.y = SOFA[2];
   add(sofa, rbox(1.5, .16, .62, .07), M.primary, 0, .15, 0); add(sofa, rbox(1.5, .5, .18, .09), M.primary, 0, .45, -.29); add(sofa, rbox(.18, .36, .62, .07), M.primary, -.78, .26, 0); add(sofa, rbox(.18, .36, .62, .07), M.primary, .78, .26, 0);
   add(sofa, rbox(.68, .07, .5, .03), M.soft, -.35, .262, .04); add(sofa, rbox(.68, .07, .5, .03), M.soft, .35, .262, .04); add(sofa, rbox(.34, .3, .12, .08), M.accent, .52, .46, -.14).rotation.z = .2;
   [[-.68, .26], [.68, .26], [-.68, -.26], [.68, -.26]].forEach(function (p) { add(sofa, cyl(.03, .025, .08, 8), M.ink, p[0], .04, p[1]); });
   var sitters = {};
   Object.keys(LEADS).forEach(function (k) {
-    var p = sitters[k] = human(LEADS[k]), u = p.userData; p.position.set(-.18, .357 - .485 * (LEADS[k].s || 1), .06); sofa.add(p); p.visible = k === view; poseSit(p, 1.5, 1.45);
+    var p = sitters[k] = human(LEADS[k]), u = p.userData; p.position.set(-.18, .357 - .485 * (LEADS[k].s || 1), .06); sofa.add(p); p.visible = false; poseSit(p, 1.5, 1.45);
     u.arms[0].sh.rotation.x = -.75; u.arms[0].el.rotation.x = -1.35; u.arms[1].sh.rotation.x = -.62; u.arms[1].el.rotation.x = -1.5; u.arms[1].sh.rotation.z = -.22; u.arms[0].sh.rotation.z = .2;
     add(u.arms[0].el, box(.1, .17, .016), M.ink, .03, -.25, .0, true); add(u.arms[0].el, box(.08, .14, .004), M.warm, .03, -.25, .011, true);
   });
-  var flamp = grp(room, -1.45, 0, -.75); add(flamp, cyl(.16, .2, .04, 16), M.ink, 0, .08, 0); add(flamp, cyl(.022, .022, 1.5, 8), M.ink, 0, .82, 0); add(flamp, cyl(.16, .3, .34, 18), M.sun, 0, 1.66, 0); glow(flamp, .5, 0, 1.6, .1);
-  var pot = grp(room, 1.25, 0, -1.05); add(pot, cyl(.2, .15, .32, 14), M.accent, 0, .22, 0); add(pot, ico(.34), M.leafC, 0, .7, 0); add(pot, ico(.26), M.leafA, .16, 1.02, .04); add(pot, ico(.2), M.leafB, -.14, 1.2, 0);
-  var stool = grp(room, .42, 0, -.5); add(stool, cyl(.2, .2, .04, 18), M.wood, 0, .36, 0); add(stool, cyl(.03, .05, .3, 8), M.ink, 0, .2, 0); add(stool, cyl(.06, .05, .09, 12), M.paper, .02, .43, 0);
+  var pot = grp(room, 1.22, 0, -.36); add(pot, cyl(.2, .15, .32, 14), M.accent, 0, .22, 0); add(pot, ico(.34), M.leafC, 0, .7, 0); add(pot, ico(.26), M.leafA, .16, 1.02, .04); add(pot, ico(.2), M.leafB, -.14, 1.2, 0);
+  var stool = grp(room, .6, 0, -.12); add(stool, cyl(.2, .2, .04, 18), M.wood, 0, .36, 0); add(stool, cyl(.03, .05, .3, 8), M.ink, 0, .2, 0); add(stool, cyl(.06, .05, .09, 12), M.paper, .02, .43, 0);
+  // the shopping, put down by the sofa once they are home
+  var dropped = grp(room, .16, .06, .74);
+  [[-.2, 'accent', .3], [.04, 'sun', -.2], [.26, 'white', .12]].forEach(function (d) { var bg = add(dropped, box(.2, .26, .11), M[d[1]], d[0], .13, d[0] * .3); bg.rotation.y = d[2]; add(dropped, new THREE.TorusGeometry(.05, .008, 6, 12, PI), M.ink, d[0], .26, d[0] * .3, true).rotation.y = d[2]; });
+  // where the walk ends: the sofa seat (SIT), the spot in front of it (F), and the path that leads in from the pavement
+  var SITX = RX + SOFA[0] - .18 * Math.cos(SOFA[2]) + .06 * Math.sin(SOFA[2]), SITZ = .5 + SOFA[1] + .18 * Math.sin(SOFA[2]) + .06 * Math.cos(SOFA[2]);
+  var WP0 = -12.4, WP1 = -1.7, WZ = 1.75, FX = SITX + .32 * Math.sin(SOFA[2]), FZ = SITZ + .32 * Math.cos(SOFA[2]);
+  var WL1 = WP1 - WP0, WL2 = Math.sqrt((FX - WP1) * (FX - WP1) + (FZ - WZ) * (FZ - WZ)), WYAW = Math.atan2(FX - WP1, FZ - WZ);
   // the order on a big floating phone
   var phoneState = -1, phoneView = '';
   var phoneTex = canvasTex(256, 512, function (x, st) {
@@ -795,13 +824,13 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     x.fillStyle = st < 4 ? T.accent : T.primary; rr(x, 14, 416, 228, 66, 33); x.fill();
     x.fillStyle = '#fffaf0'; x.textAlign = 'center'; x.font = '800 26px ' + FONT; x.fillText(st < 4 ? 'Order' : 'Order placed', 128, 451);
   });
-  var bigPhone = grp(room, 1.12, 1.6, .2); bigPhone.scale.setScalar(1.12);
+  var bigPhone = grp(room, 1.02, 1.45, .5); bigPhone.scale.setScalar(.95);
   add(bigPhone, rbox(1.14, 2.28, .1, .17), M.ink); var scr = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 2.0), new THREE.MeshBasicMaterial({ map: phoneTex })); scr.position.z = .056; bigPhone.add(scr);
-  add(bigPhone, cyl(.45, .45, .02, 32), M.soft, 0, -1.3, 0, true); glow(bigPhone, .9, 0, 0, -.2);
+  add(bigPhone, cyl(.42, .42, .02, 32), M.soft, 0, -1.437, 0, true); glow(bigPhone, .9, 0, 0, -.2);
   var pings = [0, 1, 2, 3].map(function () { var s = add(world, sph(.09, 10, 8), M.lamp, 0, 0, 0, true); glow(s, .22, 0, 0, 0); s.visible = false; return s; });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { texJobs.forEach(function (j) { j(); }); });
 
-  /* ---------- 2. the maker ---------- */
+  /* ---------- 2. the manufacturer ---------- */
   var fac = grp(world, 5.2, 0, -2);
   add(fac, box(6.4, 3, 3.6), M.paper, 0, 1.5, 0); add(fac, box(6.5, .25, 3.7), M.trim, 0, .125, 0);
   var saw = [[-3.2, 0]]; for (var si2 = 0; si2 < 4; si2++) { saw.push([-3.2 + si2 * 1.6, .95]); saw.push([-1.6 + si2 * 1.6, 0]); }
@@ -811,7 +840,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   for (var wi = 0; wi < 4; wi++) { add(fac, box(.9, .78, .06), M.glass, -2.45 + wi * 1.15, 1.95, 1.81); add(fac, box(1.0, .08, .1), M.trim, -2.45 + wi * 1.15, 1.52, 1.82); add(fac, box(.04, .78, .08), M.trim, -2.45 + wi * 1.15, 1.95, 1.83); }
   add(fac, box(1.5, 1.8, .08), M.ink, 2.35, .9, 1.81); for (var bi = 0; bi < 4; bi++) add(fac, box(1.5, .03, .1), M.trim, 2.35, .4 + bi * .4, 1.82, true);
   add(world, cyl(.78, .78, 2.8, 24), M.paper, .95, 1.4, -2.4); add(world, sph(.78, 24, 12), M.trim, .95, 2.8, -2.4); add(world, cyl(.8, .8, .1, 24), M.trim, .95, 1.0, -2.4); add(world, cyl(.8, .8, .1, 24), M.trim, .95, 2.0, -2.4);
-  var signP = grp(world, 2.95, 0, .05); add(signP, cyl(.05, .06, 2.9, 8), M.ink, 0, 1.45, 0); add(signP, rbox(1.3, .9, .1, .16), M.paper, 0, 2.9, 0); logo(signP, 0, 2.62, .07, .3);
+  var signP = grp(world, 3.6, 0, .05); add(signP, cyl(.05, .06, 2.9, 8), M.ink, 0, 1.45, 0); add(signP, rbox(1.3, .9, .1, .16), M.paper, 0, 2.9, 0); logo(signP, 0, 2.62, .07, .3);
   var smoke = []; for (var sk = 0; sk < 8; sk++) smoke.push(add(world, sph(.3, 10, 8), M.cloud, 0, 0, 0, true));
   // conveyor
   var CZ = 1.5;
@@ -954,9 +983,9 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   var KF = [
     [0,    SX,    2.25, 8.6,  10.5, .24,  9,   .27, 4.9],
     [.12, -10.2,  1.5,  10.5, 20,   0,    20,  .07, 6.6],
-    [.30, -3.8,   1.5,  10.5, 20,   0,    20,  .07, 6.6],
-    [.318, .85,   1.5,  6.2,  10.8, 0,    13,  .1,  4.5],
-    [.342, .95,   1.5,  6.2,  10.8, 0,    13,  .1,  4.5],
+    [.292, -4.6,  1.5,  10.5, 20,   0,    20,  .07, 6.6],
+    [.313, .6,    1.5,  6.4,  10.8, 0,    13,  .1,  4.7],
+    [.343, .68,   1.5,  6.4,  10.8, 0,    13,  .1,  4.7],
     [.36,  5.9,   1.65, 11.6, 23,   0,    20,  .07, 7.9],
     [.55,  6.9,   1.65, 11.6, 23,   0,    20,  .07, 7.9],
     [.62,  10.6,  1.5,  9.5,  20,   0,    20,  .07, 6.4],
@@ -983,7 +1012,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     var x = v(0);
     var follow = ez(seg(t, .56, .62)) * (1 - ez(seg(t, .80, .86)));
     x = lerp(x, lx + .9, follow);
-    if (portrait) { var fw = ez(seg(t, .1, .14)) * (1 - ez(seg(t, .29, .305))); x = lerp(x, wx + .2, fw); }
+    if (portrait) { var fw = ez(seg(t, .1, .14)) * (1 - ez(seg(t, .306, .313))); x = lerp(x, wx + .2, fw); }   // phones follow the customer all the way into the house
     var kw = ez(seg(t, .05, .14));
     var dist = v(2) * (1 + (mood.dist - 1) * kw), visW = 2 * dist * TAN * aspect, ph = (v(3) + mood.pitch * kw) * PI / 180, yw = mood.yaw * kw * (portrait ? .45 : 1) * PI / 180;
     target.set(x - v(4) * visW, v(1), .6);
@@ -997,8 +1026,8 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   /* ---------- per-frame update ---------- */
   var V = new THREE.Vector3(), curView = view, pointerX = 0;
   function arc(out, ax, ay, az, bx, by, bz, u, h) { out.set(lerp(ax, bx, u), lerp(ay, by, u) + Math.sin(u * PI) * h, lerp(az, bz, u)); }
-  // Page time -> scene time. The order scene sits in the gap between the shops (.30) and the maker (.36), stretched out.
-  function sceneTime(n) { return n < .10 ? n * 1.2 : n < .265 ? .12 + (n - .10) / .165 * .18 : n < .415 ? .30 + (n - .265) / .15 * .06 : .36 + (n - .415) / .585 * .64; }
+  // Page time -> scene time. Walking home and ordering from the sofa sit between the shops (.292) and the manufacturer (.36), stretched out.
+  function sceneTime(n) { return n < .10 ? n * 1.2 : n < .25 ? .12 + (n - .10) / .15 * .172 : n < .43 ? .292 + (n - .25) / .18 * .068 : .36 + (n - .43) / .57 * .64; }
   W.frame = function (ms, tn) {
     var t = sceneTime(tn);
     var time = ms / 1000, k;
@@ -1019,29 +1048,47 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     motif.wellness.rotation.z = time * .12;
     mstars.forEach(function (m, i) { m.scale.setScalar(m.userData.s * (.8 + Math.sin(time * 2.2 + i * 1.9) * .2)); m.rotation.z = Math.sin(time * .9 + i) * .25; });
 
-    // 1. the usual way: the customer walks the shops, the queues fidget
-    var wa = seg(t, .12, .3), wx = -12.4 + ez(wa) * 11.2, lead = walkers[curView];
+    // 1. the usual way: the customer walks the shops while the queues fidget, then carries it all home and sits down
+    var lead = walkers[curView], lu = lead.userData, ls = LEADS[curView].s || 1;
+    var w1 = seg(t, .12, .292), f1 = (w1 < .15 ? w1 * w1 / .3 : w1 - .075) / .925;                 // along the pavement: ease in, then a steady pace
+    var w2 = seg(t, .292, .304), f2 = 1.5 * w2 - .5 * w2 * w2 * w2;                               // turning in to the house: keeps the pace, eases to a stop
+    var sdr = seg(t, .304, .311), sd = ez(sdr);                                                   // sitting down
+    var dist = f1 * WL1 + f2 * WL2, wx = WP0 + f1 * WL1, wz = WZ, wy = 0, yaw = PI / 2;
+    if (w2 > 0) {
+      wx = lerp(lerp(WP1, FX, f2), SITX, sd); wz = lerp(lerp(WZ, FZ, f2), SITZ, sd);
+      wy = lerp(.12 * ez(seg(f2, .2, .45)), .417 - .485 * ls, sd);
+      yaw = lerp(lerp(PI / 2, WYAW, ez(seg(f2, 0, .3))), SOFA[2], ez(c01(seg(f2, .62, 1) * .55 + sdr * .45)));
+    }
     for (k in walkers) walkers[k].visible = k === curView;
-    walker.position.x = wx; walker.rotation.y = PI / 2; walker.visible = t < .306; walker.scale.setScalar(Math.max(.001, 1 - ez(seg(t, .3, .306))));
-    poseWalk(lead, wx * 4.4, seg(wa, 0, .05) * (1 - seg(wa, .95, 1)), false);
-    if (curView === 'baby') lead.userData.arms.forEach(function (a) { a.sh.rotation.x = -1.02; a.el.rotation.x = -.32; });                                                         // hands on the pram
-    else lead.userData.arms.forEach(function (a, i) { if (wx > SHOPX[i ? 0 : 1] + .7) { a.sh.rotation.x = Math.sin(wx * 4.4 + i * PI) * .08; a.el.rotation.x = -.08; } });         // an arm stops swinging once it carries a bag
-    lead.userData.bags.forEach(function (b, i) { b.visible = wx > SHOPX[i] + .7; });
+    walker.visible = t < .311; walker.position.set(wx, wy, wz); walker.rotation.y = yaw; walker.scale.setScalar(1);
+    poseWalk(lead, dist * 4.4, seg(w1, 0, .05) * (1 - seg(w2, .8, 1)), false);
+    var carrying = sdr < .35, parked = ez(seg(w2, .3, .95));
+    if (curView === 'baby') lu.arms.forEach(function (a) { a.sh.rotation.x = lerp(-1.02, a.sh.rotation.x, parked); a.el.rotation.x = lerp(-.32, a.el.rotation.x, parked); });        // hands on the pram until it is parked
+    else lu.arms.forEach(function (a, i) { if (carrying && wx > SHOPX[i ? 0 : 1] + .7) { a.sh.rotation.x = Math.sin(dist * 4.4 + i * PI) * .08; a.el.rotation.x = -.08; } });        // an arm stops swinging once it carries a bag
+    lu.bags.forEach(function (b, i) { b.visible = carrying && wx > SHOPX[i] + .7; });
+    if (sdr > 0) {
+      lu.legs.forEach(function (l) { l.hip.rotation.x = lerp(l.hip.rotation.x, -1.5, sd); l.knee.rotation.x = lerp(l.knee.rotation.x, 1.45, sd); });
+      lu.arms.forEach(function (a, i) { a.sh.rotation.x = lerp(a.sh.rotation.x, i ? -.62 : -.75, sd); a.el.rotation.x = lerp(a.el.rotation.x, i ? -1.5 : -1.35, sd); });
+      lu.body.position.y *= 1 - sd; lu.body.rotation.z *= 1 - sd;
+    }
+    var db = curView === 'baby' ? 0 : ez(seg(sdr, .3, .85)); dropped.visible = db > 0; dropped.scale.setScalar(Math.max(.001, db));
     pram.visible = mix.baby > .01; pram.scale.setScalar(Math.max(.001, mix.baby));
+    pram.position.set(lerp(wx + .62 * Math.sin(yaw), RX - 1.12, parked), .12 * parked, lerp(wz + .62 * Math.cos(yaw), 1.14, parked)); pram.rotation.y = lerp(yaw, .45, parked);
     if (t < .33) crowd.forEach(function (p, i) { var u = p.userData; u.head.rotation.y = Math.sin(time * .6 + i * 1.7) * .5; u.body.rotation.z = Math.sin(time * .9 + i) * .03; u.arms[i % 2].sh.rotation.x = Math.sin(time * .7 + i * 2.1) * .1; u.arms[1 - i % 2].el.rotation.x = -.15 - (i % 3 === 0 ? 1.1 + Math.sin(time * 1.3 + i) * .1 : 0); });
 
-    // 1b. order from the sofa: three ticks, one tap, and the order flies to the maker
-    var od = seg(t, .316, .345), stg = od < .1 ? 0 : od < .24 ? 1 : od < .38 ? 2 : od < .56 ? 3 : 4, sit = sitters[curView], su = sit.userData;
-    for (k in sitters) sitters[k].visible = k === curView && t > .304;
-    sit.scale.setScalar(Math.max(.001, (LEADS[curView].s || 1) * ez(seg(t, .304, .312))));
+    // 1b. order from the sofa: the phone pops up, three ticks, one tap, and the order flies to the manufacturer
+    var od = seg(t, .318, .346), stg = od < .1 ? 0 : od < .24 ? 1 : od < .38 ? 2 : od < .56 ? 3 : 4, sit = sitters[curView], su = sit.userData;
+    for (k in sitters) sitters[k].visible = k === curView && t >= .311;
+    sit.scale.setScalar(ls);
     if (stg !== phoneState || curView !== phoneView) { phoneState = stg; phoneView = curView; phoneTex.userData.draw(stg); }
     su.arms[1].el.rotation.x = stg < 4 ? -1.5 + Math.max(0, Math.sin(time * 7)) * .2 : -.5; su.arms[1].sh.rotation.x = stg < 4 ? -.62 : -2.5 + Math.sin(time * 6) * .12;
     su.head.rotation.x = stg < 4 ? .34 : -.12; su.body.rotation.z = Math.sin(time * .8) * .015;
-    bigPhone.position.y = 1.6 + Math.sin(time * 1.4) * .04; bigPhone.rotation.y = -.3 + Math.sin(time * .7) * .05;
+    var pp = ez(seg(t, .311, .319)); bigPhone.visible = pp > 0; bigPhone.scale.setScalar(Math.max(.001, .95 * pp));
+    bigPhone.position.y = 1.45 + Math.sin(time * 1.4) * .04; bigPhone.rotation.y = -.3 + Math.sin(time * .7) * .05;
     var pg = seg(t, .3445, .362);
-    pings.forEach(function (s, i) { var u = c01(pg * 1.3 - i * .08); s.visible = u > 0 && u < 1; if (s.visible) { arc(V, RX + 1.12, 2.7, .75, 4.4, 2.5, .4, u, 1.4); s.position.copy(V); s.scale.setScalar(1 - i * .17); } });
+    pings.forEach(function (s, i) { var u = c01(pg * 1.3 - i * .08); s.visible = u > 0 && u < 1; if (s.visible) { arc(V, RX + 1.02, 2.6, 1.0, 4.4, 2.5, .4, u, 1.4); s.position.copy(V); s.scale.setScalar(1 - i * .17); } });
 
-    // 2. maker: smoke, belt, bottles into the parcel
+    // 2. manufacturer: smoke, belt, bottles into the parcel
     smoke.forEach(function (s, i) { var u = (time * .16 + i / smoke.length) % 1, c = i % 2; s.position.set(5.2 + (c ? -1.55 : -2.3) + u * .9 + Math.sin(u * 6 + i) * .12, (c ? 4.4 : 4.8) + u * 2.2, -2.9); s.scale.setScalar(.4 + Math.sin(u * PI) * 1.1); s.visible = u > .02; });
     var q = seg(t, .36, .5), run = time * .5 + q * 6;
     marks.forEach(function (m, i) { m.position.x = 4.0 + ((i * .43 + run) % 4.2); });
@@ -1102,7 +1149,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     renderer.setSize(w, h, false); aspect = w / h; portrait = aspect < .9; cam.aspect = aspect; cam.updateProjectionMatrix();
   };
   W.setTheme = function (v, instant) {
-    if (!THEMES[v]) return; curView = v; var k;
+    if (!THEMES[v]) return; curView = v; var k; signTex.forEach(function (sg) { sg.userData.draw(); });
     for (k in themed) { themed[k].to = lin(THEMES[v][k]); if (instant) themed[k].m.color.copy(themed[k].to); }
     if (instant) { for (k in mix) mix[k] = k === v ? 1 : 0; moodStep(1); }
   };
@@ -1257,7 +1304,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   /* ---------------- Category views ---------------- */
   var root = document.documentElement, world = null, snapT = false;
   var TAGS = {"home": [["Laundry detergent, 9x", "69.50", "102.30", 0], ["All-purpose cleaner, 12x", "29.50", "43.40", 3]], "wellness": [["Multivitamin and mineral", "73.50", "105.00", 0], ["Omega-3", "84.00", "120.00", 2]], "baby": [["Baby shampoo and wash", "35.00", "53.90", 0], ["Baby lotion", "28.00", "43.10", 1]]};
-  var CAPS = {"home": [["The usual way", "Three shops. Three queues."], ["The smart way", "Order once, from the sofa."], ["No middlemen", "Packed by the maker."], ["On its way", "One box. One trip."], ["30–50% below regular prices", "Straight to your door."]], "wellness": [["The usual way", "One counter after another."], ["The smart way", "A few taps instead."], ["No middlemen", "Your whole routine, one maker."], ["On its way", "One rider. One box."], ["30–50% below regular prices", "At your door."]], "baby": [["The usual way", "Three shops, with the pram."], ["The smart way", "Order while baby naps."], ["No middlemen", "Everything for baby, one maker."], ["On its way", "One box. One quiet trip."], ["30–50% below regular prices", "Right to your doorstep."]]};
+  var CAPS = {"home": [["The usual way", "Three shops. Three queues."], ["The smart way", "Order once, from the sofa."], ["No middlemen", "Packed by the manufacturer."], ["On its way", "One box. One trip."], ["30–50% below regular prices", "Straight to your door."]], "wellness": [["The usual way", "One counter after another."], ["The smart way", "A few taps instead."], ["No middlemen", "Your whole routine, one manufacturer."], ["On its way", "One rider. One box."], ["30–50% below regular prices", "At your door."]], "baby": [["The usual way", "Three shops, with the pram."], ["The smart way", "Order while baby naps."], ["No middlemen", "Everything for baby, one manufacturer."], ["On its way", "One box. One quiet trip."], ["30–50% below regular prices", "Right to your doorstep."]]};
   function setCaps(view) { [].forEach.call(document.querySelectorAll('.cap'), function (cp, i) { cp.querySelector('small').textContent = CAPS[view][i][0]; cp.querySelector('.ct').textContent = CAPS[view][i][1]; }); }
   function setTags(view) {
     TAGS[view].forEach(function (d, i) { var el = document.getElementById('tag' + i); el.querySelector('b').textContent = d[0]; el.querySelector('i').textContent = 'RM' + d[1]; el.querySelector('s').textContent = 'RM' + d[2]; el.setAttribute('data-i', d[3]); });
