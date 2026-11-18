@@ -831,7 +831,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { texJobs.forEach(function (j) { j(); }); });
 
   /* ---------- 2. the manufacturer ---------- */
-  var fac = grp(world, 8.7, 0, -2);
+  var fac = grp(world, 27, 0, -2);
   add(fac, box(6.4, 3, 3.6), M.paper, 0, 1.5, 0); add(fac, box(6.5, .25, 3.7), M.trim, 0, .125, 0);
   var saw = [[-3.2, 0]]; for (var si2 = 0; si2 < 4; si2++) { saw.push([-3.2 + si2 * 1.6, .95]); saw.push([-1.6 + si2 * 1.6, 0]); }
   add(fac, prism(saw, 3.6), M.accent, 0, 3, -1.8);
@@ -839,18 +839,18 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   add(fac, cyl(.22, .26, 1.3, 16), M.accent, -1.55, 3.65, -.9); add(fac, cyl(.25, .25, .1, 16), M.ink, -1.55, 4.32, -.9);
   for (var wi = 0; wi < 4; wi++) { add(fac, box(.9, .78, .06), M.glass, -2.45 + wi * 1.15, 1.95, 1.81); add(fac, box(1.0, .08, .1), M.trim, -2.45 + wi * 1.15, 1.52, 1.82); add(fac, box(.04, .78, .08), M.trim, -2.45 + wi * 1.15, 1.95, 1.83); }
   add(fac, box(1.5, 1.8, .08), M.ink, 2.35, .9, 1.81); for (var bi = 0; bi < 4; bi++) add(fac, box(1.5, .03, .1), M.trim, 2.35, .4 + bi * .4, 1.82, true);
-  add(world, cyl(.78, .78, 2.8, 24), M.paper, 4.45, 1.4, -2.4); add(world, sph(.78, 24, 12), M.trim, 4.45, 2.8, -2.4); add(world, cyl(.8, .8, .1, 24), M.trim, 4.45, 1.0, -2.4); add(world, cyl(.8, .8, .1, 24), M.trim, 4.45, 2.0, -2.4);
-  var signP = grp(world, 7.1, 0, .05); add(signP, cyl(.05, .06, 2.9, 8), M.ink, 0, 1.45, 0); add(signP, rbox(1.3, .9, .1, .16), M.paper, 0, 2.9, 0); logo(signP, 0, 2.62, .07, .3);
+  add(world, cyl(.78, .78, 2.8, 24), M.paper, 22.75, 1.4, -2.4); add(world, sph(.78, 24, 12), M.trim, 22.75, 2.8, -2.4); add(world, cyl(.8, .8, .1, 24), M.trim, 22.75, 1.0, -2.4); add(world, cyl(.8, .8, .1, 24), M.trim, 22.75, 2.0, -2.4);
+  var signP = grp(world, 25.4, 0, .05); add(signP, cyl(.05, .06, 2.9, 8), M.ink, 0, 1.45, 0); add(signP, rbox(1.3, .9, .1, .16), M.paper, 0, 2.9, 0); logo(signP, 0, 2.62, .07, .3);
   var smoke = []; for (var sk = 0; sk < 8; sk++) smoke.push(add(world, sph(.3, 10, 8), M.cloud, 0, 0, 0, true));
   // conveyor
   var CZ = 1.5;
-  add(world, rbox(1.15, 1.55, 1.1, .16), M.primary, 6.8, .78, CZ); add(world, box(.08, .5, .62), M.ink, 7.39, 1.08, CZ); add(world, cyl(.1, .1, .5, 10), M.ink, 6.6, 1.75, CZ); add(world, sph(.1, 10, 8), M.lamp, 7.1, 1.62, CZ, true);
-  add(world, box(4.35, .1, .64), M.ink, 9.55, .8, CZ); add(world, box(4.35, .08, .06), M.sun, 9.55, .89, CZ + .35); add(world, box(4.35, .08, .06), M.sun, 9.55, .89, CZ - .35);
-  [7.6, 8.9, 10.2, 11.5].forEach(function (x) { add(world, box(.1, .76, .1), M.trim, x, .38, CZ + .25); add(world, box(.1, .76, .1), M.trim, x, .38, CZ - .25); });
-  add(world, cyl(.12, .12, .66, 12), M.trim, 7.45, .8, CZ).rotation.x = PI / 2; add(world, cyl(.12, .12, .66, 12), M.trim, 11.7, .8, CZ).rotation.x = PI / 2;
+  add(world, rbox(1.15, 1.55, 1.1, .16), M.primary, 25.1, .78, CZ); add(world, box(.08, .5, .62), M.ink, 25.69, 1.08, CZ); add(world, cyl(.1, .1, .5, 10), M.ink, 24.9, 1.75, CZ); add(world, sph(.1, 10, 8), M.lamp, 25.4, 1.62, CZ, true);
+  add(world, box(4.35, .1, .64), M.ink, 27.85, .8, CZ); add(world, box(4.35, .08, .06), M.sun, 27.85, .89, CZ + .35); add(world, box(4.35, .08, .06), M.sun, 27.85, .89, CZ - .35);
+  [25.9, 27.2, 28.5, 29.8].forEach(function (x) { add(world, box(.1, .76, .1), M.trim, x, .38, CZ + .25); add(world, box(.1, .76, .1), M.trim, x, .38, CZ - .25); });
+  add(world, cyl(.12, .12, .66, 12), M.trim, 25.75, .8, CZ).rotation.x = PI / 2; add(world, cyl(.12, .12, .66, 12), M.trim, 30, .8, CZ).rotation.x = PI / 2;
   var marks = []; for (var mi = 0; mi < 10; mi++) marks.push(add(world, box(.05, .012, .5), M.trim, 0, .857, CZ, true));
-  var PALX = 12.28; add(world, box(.95, .12, .85), M.wood, PALX, .06, CZ);
-  var st1 = grp(world, 13.9, 0, .55); add(st1, box(.6, .45, .5), M.card, 0, .225, 0); add(st1, box(.55, .4, .5), M.card, .62, .2, .05); add(st1, box(.5, .4, .45), M.card, .25, .65, 0);
+  var PALX = 30.58; add(world, box(.95, .12, .85), M.wood, PALX, .06, CZ);
+  var st1 = grp(world, 32.2, 0, .55); add(st1, box(.6, .45, .5), M.card, 0, .225, 0); add(st1, box(.55, .4, .5), M.card, .62, .2, .05); add(st1, box(.5, .4, .45), M.card, .25, .65, 0);
   var miniSets = { home: [], wellness: [], baby: [] };   // bottles, jars, or rubber ducks
   ['accent', 'sun', 'paper', 'primary', 'accent'].forEach(function (c, n) {
     var g = new THREE.Group(), body = M[c];
@@ -911,16 +911,16 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   var VEH = { home: { g: lorry, body: lbody, wheels: wheels, r: .36, cx: -.72, cy: .71 }, wellness: { g: scoot, body: sbody, wheels: swheels, r: .3, cx: -1.0, cy: .83 }, baby: { g: van, body: vbody, wheels: vwheels, r: .3, cx: -.3, cy: 1.7 } };
 
   /* ---------- road-side scenery for the drive ---------- */
-  [[14.9, -1.7, 1.1], [13.6, -2.8, 1, 'pine'], [16.2, -1.6, 1.2], [18.4, -2.6, .95, 'pine'], [20.8, -1.8, 1.1], [23.2, -2.9, 1.05], [25.2, -1.7, .9, 'pine'], [33.7, -1.6, 1.25], [35.6, -3, 1, 'pine'],
+  [[14.9, -1.7, 1.1], [13.6, -2.8, 1, 'pine'], [16.2, -1.6, 1.2], [18.4, -2.6, .95, 'pine'], [9.6, -1.8, 1.1], [11.4, -2.9, 1.05], [7.2, -1.7, .9, 'pine'], [33.7, -1.6, 1.25], [35.6, -3, 1, 'pine'],
    [12.5, -9, 1.5], [15.5, -11, 1.3, 'pine'], [21.5, -10, 1.6], [26, -12, 1.3, 'pine'], [-6, -9, 1.5], [3, -11, 1.4, 'pine'], [-16, -10, 1.5], [38, -7, 1.5], [41, -2, 1.1, 'pine']
   ].forEach(function (t) { tree(t[0], t[1], t[2], t[3]); });
-  [15.5, 18.8, 22, 26.6, 34].forEach(lamp);
-  [[-8.4, 7.1, 1, 0], [-1.2, 6.8, .8, 1], [4.2, 7.2, 1, 0], [12.4, 6.9, .9, 1], [17.3, 7.2, 1, 0], [22.8, 6.8, .85, 1], [26.4, 7.1, 1, 0], [32.5, 6.9, .9, 1], [14.6, -.4, .8, 1], [19.6, -.5, .9, 0], [24.2, -.4, .8, 1]].forEach(function (b) { bush(b[0], b[1], b[2], b[3]); });
+  [6, 10, 14, 18, 34].forEach(lamp);
+  [[-8.4, 7.1, 1, 0], [-1.2, 6.8, .8, 1], [4.2, 7.2, 1, 0], [12.4, 6.9, .9, 1], [17.3, 7.2, 1, 0], [22.8, 6.8, .85, 1], [26.4, 7.1, 1, 0], [32.5, 6.9, .9, 1], [14.6, -.4, .8, 1], [19.6, -.5, .9, 0], [8.4, -.4, .8, 1]].forEach(function (b) { bush(b[0], b[1], b[2], b[3]); });
   smallHouse(13.6, -6.6, M.trim, M.primary, 1); smallHouse(18.8, -7.4, M.paper, M.sun, 1.1); smallHouse(23.6, -6.4, M.trim, M.accent, .95); smallHouse(-7.5, -6.8, M.paper, M.sun, 1); smallHouse(37.5, -5.5, M.trim, M.primary, 1);
   var clouds = [[-24, 9.5, -16, 1.5], [-12, 11, -22, 1.9], [-2, 9, -15, 1.3], [9, 11.5, -24, 2], [17, 9.2, -16, 1.4], [26, 11, -22, 1.8], [36, 9.6, -17, 1.5], [46, 11, -23, 1.9]].map(function (c) { return cloud(c[0], c[1], c[2], c[3]); });
 
   /* ---------- 4. your door ---------- */
-  var HX = 30, house = grp(world, HX, 0, -2.4);
+  var HX = 80, house = grp(world, HX, 0, -2.4);   // the old second house, now parked out of view: the parcel comes back to the customer's own home
   add(house, box(4.2, 2.5, 3.4), M.paper, 0, 1.25, 0); add(house, box(4.3, .22, 3.5), M.trim, 0, .11, 0);
   add(house, prism([[-2.55, 0], [2.55, 0], [0, 1.75]], 3.9), M.accent, 0, 2.5, -1.95);
   add(house, prism([[-1.95, 0], [1.95, 0], [0, 1.34]], .06), M.paper, 0, 2.56, 1.92);
@@ -935,9 +935,14 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   add(house, box(1.4, .16, .22), M.wood, 1.0, .74, 1.84); for (var fl = 0; fl < 7; fl++) add(house, sph(.075, 8, 6), fl % 2 ? M.sun : M.accent, .4 + fl * .2, .88 + (fl % 3) * .03, 1.86, true);
   add(house, box(1.4, .14, .75), M.pave, DXL, .07, 2.07); add(house, box(.9, .02, .5), M.primary, DXL, .15, 2.05, true);
   add(house, sph(.08, 10, 8), M.lamp, -.1, 1.95, 1.76, true);
-  var DOOR = new THREE.Vector3(HX + DXL, .16, -.18);
-  var greeters = {};
-  Object.keys(LEADS).forEach(function (k) { var p = greeters[k] = human(LEADS[k]); house.add(p); p.position.set(DXL - .02, .14, 1.4); p.visible = false; });
+  var DOOR = new THREE.Vector3(RX + .3, .16, 2.25);   // the customer's own front step
+  var homeStep = grp(world, RX + .3, 0, -.3), greeters = {};
+  // floating labels for the two wide shots, so the distance from home to the manufacturer reads at a glance
+  var tags = [['Your home', RX, 4.6], ['Manufacturer', 27, 6.6]].map(function (d) {
+    var tx = canvasTex(512, 128, function (x) { x.clearRect(0, 0, 512, 128); x.fillStyle = 'rgba(255,250,240,.95)'; rr(x, 16, 16, 480, 96, 48); x.fill(); x.fillStyle = '#1b2620'; x.font = '800 52px ' + FONT; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(d[0], 256, 66); });
+    var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tx, transparent: true, depthTest: false })); sp.scale.set(5.6, 1.4, 1); sp.position.set(d[1], d[2], 0); sp.renderOrder = 10; sp.visible = false; world.add(sp); return sp;
+  });
+  Object.keys(LEADS).forEach(function (k) { var p = greeters[k] = human(LEADS[k]); homeStep.add(p); p.position.set(0, .14, 1.4); p.visible = false; });
   bush(HX - 2.3, -.45, 1.05, true); bush(HX + 2.2, -.4, 1.1, true); bush(HX + 1.2, -.3, .7);
   for (var pk = 0; pk < 13; pk++) { var px = HX + .25 + pk * .22; add(world, box(.1, .5, .04), M.paper, px, .25, .22); } add(world, box(2.9, .05, .03), M.paper, HX + 1.57, .34, .2);
   for (pk = 0; pk < 4; pk++) add(world, box(.1, .5, .04), M.paper, HX - 2.3 + pk * .22, .25, .22); add(world, box(.8, .05, .03), M.paper, HX - 1.97, .34, .2);
@@ -945,7 +950,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
 
   glow(house, .95, 1.0, 1.42, 2.0); glow(house, .5, -.1, 1.95, 1.9);
   /* ---------- per-category touches at the door ---------- */
-  var props = { home: grp(world, HX, 0, 0), wellness: grp(world, HX, 0, 0), baby: grp(world, HX, 0, 0) };
+  var props = { home: grp(world, RX, 0, 0), wellness: grp(world, RX, 0, 0), baby: grp(world, RX, 0, 0) };
   add(props.home, cyl(.035, .04, 1.7, 8), M.trim, 3.5, .85, -.5); add(props.home, cyl(.035, .04, 1.7, 8), M.trim, 5.3, .85, -.5); add(props.home, box(1.8, .02, .02), M.ink, 4.4, 1.62, -.5, true);
   var washing = [[3.85, 'accent', .42], [4.4, 'paper', .5], [4.95, 'sun', .38]].map(function (d) { var h = grp(props.home, d[0], 1.61, -.5); add(h, box(.36, d[2], .02), M[d[1]], 0, -d[2] / 2, 0); return h; });
   [[-1.64, -.36, 1], [.02, -.36, .85]].forEach(function (d) { var g = grp(props.wellness, d[0], 0, d[1]); g.scale.setScalar(d[2]); add(g, cyl(.17, .12, .26, 12), M.accent, 0, .13, 0); add(g, ico(.26), M.leafC, 0, .5, 0); add(g, ico(.2), M.leafA, .12, .74, .02); add(g, ico(.16), M.leafB, -.1, .92, 0); });
@@ -986,12 +991,13 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     [.292, -6.1,  1.5,  10.5, 20,   0,    20,  .07, 6.6],
     [.313, .6,    1.5,  6.4,  10.8, 0,    13,  .1,  4.7],
     [.343, .68,   1.5,  6.4,  10.8, 0,    13,  .1,  4.7],
-    [.36,  9.4,   1.65, 11.6, 23,   0,    20,  .07, 7.9],
-    [.55,  10.4,  1.65, 11.6, 23,   0,    20,  .07, 7.9],
-    [.62,  14.1,  1.5,  9.5,  20,   0,    20,  .07, 6.4],
-    [.80,  28.2,  1.5,  9.5,  20,   0,    20,  .07, 6.4],
-    [.87,  29.4,  1.6,  8.8,  20,   0,    20,  .07, 6.4],
-    [1,    29.6,  1.9,  8.8,  19,   0,    20,  .09, 6.4]
+    [.3525, 15.5, 5,   38,   34,   0,    34,  .02, 34],
+    [.36,  27.7,  1.65, 11.6, 23,   0,    20,  .07, 7.9],
+    [.55,  28.7,  1.65, 11.6, 23,   0,    20,  .07, 7.9],
+    [.62,  26,    4.4,  30,   32,   0,    32,  .02, 26],
+    [.80,  6,     4.4,  30,   32,   0,    32,  .02, 26],
+    [.87,  1.1,   1.6,  8.8,  20,   0,    20,  .07, 6.4],
+    [1,    1.3,   1.9,  8.8,  19,   0,    20,  .09, 6.4]
   ];
   var TAN = Math.tan(15 * PI / 180), aspect = 1, portrait = false, target = new THREE.Vector3(), camDist = 16;
   // Portrait hero: the page tells us which slice of the screen is free below the headline (fractions of canvas height).
@@ -1011,7 +1017,7 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     var a = pose(KF[i], PA), b = pose(KF[i + 1], PB), u = ez(seg(t, KF[i][0], KF[i + 1][0])), v = function (n) { return lerp(a[n], b[n], u); };
     var x = v(0);
     var follow = ez(seg(t, .56, .62)) * (1 - ez(seg(t, .80, .86)));
-    x = lerp(x, lx + .9, follow);
+    x = lerp(x, lx - .9, follow);
     if (portrait) { var fw = ez(seg(t, .1, .14)) * (1 - ez(seg(t, .306, .313))); x = lerp(x, wx + .2, fw); }   // phones follow the customer all the way into the house
     var kw = ez(seg(t, .05, .14));
     var dist = v(2) * (1 + (mood.dist - 1) * kw), visW = 2 * dist * TAN * aspect, ph = (v(3) + mood.pitch * kw) * PI / 180, yw = mood.yaw * kw * (portrait ? .45 : 1) * PI / 180;
@@ -1078,25 +1084,25 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
 
     // 1b. order from the sofa: the phone pops up, three ticks, one tap, and the order flies to the manufacturer
     var od = seg(t, .318, .346), stg = od < .1 ? 0 : od < .24 ? 1 : od < .38 ? 2 : od < .56 ? 3 : 4, sit = sitters[curView], su = sit.userData;
-    for (k in sitters) sitters[k].visible = k === curView && t >= .311;
+    for (k in sitters) sitters[k].visible = k === curView && t >= .311 && t < .903;
     sit.scale.setScalar(ls);
     if (stg !== phoneState || curView !== phoneView) { phoneState = stg; phoneView = curView; phoneTex.userData.draw(stg); }
     su.arms[1].el.rotation.x = stg < 4 ? -1.5 + Math.max(0, Math.sin(time * 7)) * .2 : -.5; su.arms[1].sh.rotation.x = stg < 4 ? -.62 : -2.5 + Math.sin(time * 6) * .12;
     su.head.rotation.x = stg < 4 ? .34 : -.12; su.body.rotation.z = Math.sin(time * .8) * .015;
-    var pp = ez(seg(t, .311, .319)); bigPhone.visible = pp > 0; bigPhone.scale.setScalar(Math.max(.001, .95 * pp));
+    var pp = ez(seg(t, .311, .319)); bigPhone.visible = pp > 0 && t < .86; bigPhone.scale.setScalar(Math.max(.001, .95 * pp));
     bigPhone.position.y = 1.45 + Math.sin(time * 1.4) * .04; bigPhone.rotation.y = -.3 + Math.sin(time * .7) * .05;
     var pg = seg(t, .3445, .362);
-    pings.forEach(function (s, i) { var u = c01(pg * 1.3 - i * .08); s.visible = u > 0 && u < 1; if (s.visible) { arc(V, RX + 1.02, 2.6, 1.0, 7.9, 2.5, .4, u, 1.4); s.position.copy(V); s.scale.setScalar(1 - i * .17); } });
+    pings.forEach(function (s, i) { var u = c01(pg * 1.3 - i * .08); s.visible = u > 0 && u < 1; if (s.visible) { arc(V, RX + 1.02, 2.6, 1.0, 26.2, 2.5, .4, u, 4.5); s.position.copy(V); s.scale.setScalar(1 - i * .17); } });
 
     // 2. manufacturer: smoke, belt, bottles into the parcel
-    smoke.forEach(function (s, i) { var u = (time * .16 + i / smoke.length) % 1, c = i % 2; s.position.set(8.7 + (c ? -1.55 : -2.3) + u * .9 + Math.sin(u * 6 + i) * .12, (c ? 4.4 : 4.8) + u * 2.2, -2.9); s.scale.setScalar(.4 + Math.sin(u * PI) * 1.1); s.visible = u > .02; });
+    smoke.forEach(function (s, i) { var u = (time * .16 + i / smoke.length) % 1, c = i % 2; s.position.set(27 + (c ? -1.55 : -2.3) + u * .9 + Math.sin(u * 6 + i) * .12, (c ? 4.4 : 4.8) + u * 2.2, -2.9); s.scale.setScalar(.4 + Math.sin(u * PI) * 1.1); s.visible = u > .02; });
     var q = seg(t, .36, .5), run = time * .5 + q * 6;
-    marks.forEach(function (m, i) { m.position.x = 7.5 + ((i * .43 + run) % 4.2); });
+    marks.forEach(function (m, i) { m.position.x = 25.8 + ((i * .43 + run) % 4.2); });
     for (k in miniSets) if (k !== curView) miniSets[k].forEach(function (b) { b.visible = false; });
     miniSets[curView].forEach(function (b, i) {
       var u = seg(q, i * .15, i * .15 + .4), on = c01(u / .74), drop = c01((u - .74) / .26);
-      if (drop > 0) { arc(V, 11.68, .86, CZ, PALX, .42, CZ, drop, .42); b.position.copy(V); b.rotation.z = -drop * 1.2; b.scale.setScalar(.4 * (1 - drop * .45)); }
-      else { b.position.set(7.25 + on * 4.43, .86 + (curView === 'baby' ? Math.abs(Math.sin(on * 19 + i)) * .11 : 0), CZ); b.rotation.z = 0; b.scale.setScalar(.4); }   // ducks hop along
+      if (drop > 0) { arc(V, 29.98, .86, CZ, PALX, .42, CZ, drop, .42); b.position.copy(V); b.rotation.z = -drop * 1.2; b.scale.setScalar(.4 * (1 - drop * .45)); }
+      else { b.position.set(25.55 + on * 4.43, .86 + (curView === 'baby' ? Math.abs(Math.sin(on * 19 + i)) * .11 : 0), CZ); b.rotation.z = 0; b.scale.setScalar(.4); }   // ducks hop along
       b.rotation.y = curView === 'wellness' ? on * 9 + i : 0;                                                                                                // jars spin
       b.visible = u > 0 && u < 1;
     });
@@ -1107,17 +1113,17 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
 
     // 3. lorry
     var lx;
-    if (t < .52) { var a1 = seg(t, .4, .52); lx = lerp(-34, 13.1, 1 - Math.pow(1 - a1, 3)); }
-    else lx = lerp(13.1, 27.3, ez(seg(t, .58, .82)));
+    if (t < .52) { var a1 = seg(t, .4, .52); lx = lerp(70, PALX - .82, 1 - Math.pow(1 - a1, 3)); }
+    else lx = lerp(PALX - .82, RX + 3.6, ez(seg(t, .58, .82)));   // the courier drives the parcel all the way back to the customer's home
     var moving = (t > .4 && t < .52) || (t > .58 && t < .82);
     var veh = VEH[curView];
     for (k in VEH) VEH[k].g.visible = k === curView;
-    veh.g.position.x = lx;
+    veh.g.position.x = lx; veh.g.rotation.y = PI;
     veh.body.position.y = moving ? Math.sin(time * 17) * .012 : 0; veh.body.rotation.z = moving ? Math.sin(time * 9) * .006 - (curView === 'wellness' ? .03 : 0) : 0;
-    veh.wheels.forEach(function (w) { w.rotation.z = -lx / veh.r; });
+    veh.wheels.forEach(function (w) { w.rotation.z = lx / veh.r; });
 
     // parcel: on the pallet -> lorry bed -> doorstep
-    var load = ez(seg(t, .53, .575)), give = ez(seg(t, .84, .905)), bedX = lx + veh.cx, bedY = veh.cy + veh.body.position.y;
+    var load = ez(seg(t, .53, .575)), give = ez(seg(t, .84, .905)), bedX = lx - veh.cx, bedY = veh.cy + veh.body.position.y;
     if (give > 0) arc(parcel.position, bedX, bedY, LZ, DOOR.x, DOOR.y, DOOR.z, give, 1.9);
     else if (load > 0) arc(parcel.position, PALX, .12, CZ, bedX, bedY, LZ, load, 1.5);
     else parcel.position.set(PALX, .12, CZ);
@@ -1126,6 +1132,8 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
     // 4. the door
     var dop = ez(seg(t, .9, .945)), gr = greeters[curView], gu = gr.userData, wv = ez(seg(t, .94, .975));
     hinge.rotation.y = dop * 1.75;
+var ov = Math.max(seg(t, .343, .3505) * (1 - seg(t, .356, .362)), seg(t, .585, .625) * (1 - seg(t, .79, .83)));
+tags.forEach(function (s) { s.visible = ov > .02; s.material.opacity = ov; });
     for (k in greeters) greeters[k].visible = k === curView && dop > .05;
     gr.position.z = lerp(1.4, 1.87, ez(seg(t, .915, .96)));
     gu.arms[1].sh.rotation.z = .1 + wv * 2.45; gu.arms[1].el.rotation.z = wv * (.35 + Math.sin(time * 8) * .35); gu.head.rotation.x = .12 * (1 - wv);
@@ -1581,6 +1589,29 @@ window.SmartShelfWorld = function (canvas, THREE, view) {
   if (window.ResizeObserver) new ResizeObserver(function () { place(false); }).observe(nav);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { place(false); });
   place(false);
+})();
+</script>
+
+<!-- Smart Shelf: miniature (tilt-shift) look while the scroll story plays. -->
+<div class="ss-tilt" aria-hidden="true"><i></i><i></i></div>
+<style>
+.ss-tilt { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .8s ease; }
+.ss-tilt i { position: absolute; left: 0; right: 0; height: 30%; -webkit-backdrop-filter: blur(3.5px) saturate(1.12); backdrop-filter: blur(3.5px) saturate(1.12); }
+.ss-tilt i:first-child { top: 0; -webkit-mask-image: linear-gradient(#000 25%, transparent); mask-image: linear-gradient(#000 25%, transparent); }
+.ss-tilt i:last-child { bottom: 0; -webkit-mask-image: linear-gradient(transparent, #000 75%); mask-image: linear-gradient(transparent, #000 75%); }
+html.ss-mini .ss-tilt { opacity: 1; }
+html.ss-mini #gl { filter: saturate(1.1) contrast(1.04); }
+#gl { transition: filter .8s ease; }
+@media (prefers-reduced-transparency: reduce) { .ss-tilt { display: none; } }
+</style>
+<script>
+/* Turn the miniature look on while the scroll story fills the screen. */
+(function () {
+  var story = document.getElementById('story');
+  if (!story || !window.IntersectionObserver) return;
+  new IntersectionObserver(function (es) {
+    document.documentElement.classList.toggle('ss-mini', es[0].isIntersecting && es[0].intersectionRatio > 0);
+  }, { rootMargin: '-35% 0px -35% 0px' }).observe(story);
 })();
 </script>
 
